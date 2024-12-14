@@ -58,6 +58,10 @@
     <div class="contact-right">
         <h2>Skontaktuj się z nami</h2>
         <form id="contactForm" action="https://formsubmit.co/2dde70f831e18b17173f34ec73b037a9" method="POST">
+            <!--Honeypot-->
+            <input type="text" name="_honey" style="display:none">
+            <!--Disable Captcha-->
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
                 <label for="name">Imię</label>
                 <input type="text" id="name" name="name" placeholder="Podaj swoje imię" required>
