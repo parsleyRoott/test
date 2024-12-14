@@ -1,0 +1,360 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    background: #1E1E1E;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styl podstawowy dla linków */
+a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Styl po najechaniu */
+a:hover {
+    transform: scale(1.2);
+    color: #007BFF;
+}
+
+a.logo:hover {
+    transform: none; /* Brak powiększenia */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E2E2E;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D2691E;
+    flex-shrink: 0;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #D2691E;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 30vh;
+    background-color: rgba(46, 46, 46, 0.9);
+    padding: 20px;
+    border: 1px solid #D2691E;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.welcome h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+footer {
+    background-color: #2E2E2E;
+    text-align: center;
+    padding: 10px 0;
+    color: #FFFFFF;
+}
+
+footer p {
+    margin: 0;
+    color: #D2691E;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 3px 0;
+}
+
+/* Menu przesuwane z prawej strony */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #2E2E2E;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.side-menu a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.side-menu a:hover {
+    color: #D2691E;
+}
+
+/* Klasa aktywna dla widocznego menu */
+.side-menu.active {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.close-btn:hover {
+    color: #D2691E;
+}
+
+/* Dopasowania dla urządzeń mobilnych */
+@media (max-width: 1100px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Kontener dla sekcji kontaktowej */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Zapewnia jednakową wysokość obu sekcji */
+    max-width: 1000px; /* Ograniczenie szerokości całego kontenera */
+    margin: 50px auto; /* Wyśrodkowanie poziome i odstęp od góry */
+    gap: 20px; /* Odstęp między sekcjami */
+    padding: 20px;
+    background-color: #1E1E1E; /* Tło za kontenerem */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtelny cień pod całym kontenerem */
+    color: #FFFFFF;
+}
+
+/* Lewa część (dane kontaktowe) */
+.contact-left,
+.contact-right {
+    flex: 1; /* Obie sekcje zajmują taką samą ilość miejsca */
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Układ pionowy w obu sekcjach */
+    justify-content: center; /* Wyrównanie w pionie */
+}
+
+.contact-left h2,
+.contact-right h2 {
+    margin-top: 0;
+    color: #D2691E;
+    text-align: center; /* Środkowanie nagłówka */
+}
+
+.contact-left ul {
+    padding-left: 20px;
+}
+
+/* Formularz w prawej sekcji */
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Odstępy między polami */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ccc;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #D2691E;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px; /* Szerokość przycisku */
+    align-self: center; /* Wyrównanie przycisku do środka */
+}
+
+.submit-btn:hover {
+    background-color: #A0522D;
+}
+
+/* Prawa część (formularz kontaktowy) */
+.contact-right {
+    flex: 1; /* Obie sekcje mają taką samą wielkość */
+    background-color: #2E2E2E;
+    padding: 30px; /* Większy padding dla lepszej czytelności */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Wyrównanie treści na środku */
+}
+
+/* Formularz */
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Większy odstęp między polami formularza */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Pola formularza wypełniają całą szerokość */
+    padding: 0; /* Zerowanie paddingu zewnętrznego */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%; /* Pola nie dotykają krawędzi sekcji, mają symetryczne marginesy */
+    max-width: 560px; /* Ograniczenie szerokości dla większych ekranów */
+    padding: 12px; /* Większy padding dla lepszego komfortu użytkownika */
+    margin: 0 auto; /* Wyśrodkowanie pól formularza */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #1E1E1E;
+    color: #FFFFFF;
+    box-sizing: border-box; /* Upewnia się, że padding nie wykracza poza szerokość */
+}
+
+/* Placeholder wewnętrzny */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ccc;
+}
+
+/* Tekstarea (pole wiadomości) */
+.form-group textarea {
+    resize: none; /* Wyłącza możliwość skalowania okna wiadomości */
+    height: 120px; /* Konkretny rozmiar pola */
+}
+
+/* Przycisk wyślij */
+.submit-btn {
+    background-color: #D2691E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100px; /* Standardowa szerokość przycisku */
+    align-self: center; /* Wyśrodkowanie przycisku względem formularza */
+    margin-top: 10px; /* Dystans między ostatnim polem a przyciskiem */
+}
+
+.submit-btn:hover {
+    background-color: #A0522D;
+}
+
+/* Styl responsywny dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Układ pionowy zamiast poziomego */
+        gap: 30px; /* Większy odstęp między sekcjami w układzie pionowym */
+        padding: 20px; /* Dostosowanie paddingu */
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%; /* Sekcje zajmują całą szerokość kontenera */
+        max-width: none; /* Usunięcie maksymalnej szerokości */
+        margin: 0 auto; /* Wyśrodkowanie sekcji */
+    }
+}

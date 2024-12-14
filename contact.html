@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Gabinet Stomatologiczny</title>
+    <!-- Wczytywanie czcionki Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">Gabinet Stomatologiczny</a>
+    <nav class="nav">
+        <a href="#about">O nas</a>
+        <a href="#pricing">Cennik</a>
+        <a href="location.html">Lokalizacja</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="#preparation">Przed wizytą</a>
+        <a href="#gallery">Galeria</a>
+    </nav>
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<!-- Menu boczne -->
+<div class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <a href="#about">O nas</a>
+    <a href="#pricing">Cennik</a>
+    <a href="location.html">Lokalizacja</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="#preparation">Przed wizytą</a>
+    <a href="#gallery">Galeria</a>
+</div>
+
+<!-- Kontener na cały content -->
+<div class="contact-container">
+    <!-- Dane kontaktowe po lewej stronie -->
+    <div class="contact-left">
+        <h2>Dane kontaktowe</h2>
+        <p><strong>Adres:</strong> ul. Przyjazna 12, 00-123 Warszawa</p>
+        <p><strong>Telefon:</strong> +48 123 456 789</p>
+        <p><strong>Email:</strong> kontakt@stomatolog.com</p>
+        <p><strong>Godziny otwarcia:</strong></p>
+        <ul>
+            <li>Poniedziałek - Piątek: 8:00 - 18:00</li>
+            <li>Sobota: 9:00 - 14:00</li>
+            <li>Niedziela: Nieczynne</li>
+        </ul>
+    </div>
+
+    <!-- Formularz kontaktowy po prawej stronie -->
+    <div class="contact-right">
+        <h2>Skontaktuj się z nami</h2>
+        <form id="contactForm" action="https://formsubmit.co/antekmilomi@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name" placeholder="Podaj swoje imię" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Podaj swój e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numer telefonu</label>
+                <input type="tel" id="phone" name="phone" placeholder="Podaj numer telefonu" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Treść wiadomości</label>
+                <textarea id="message" name="message" rows="5" placeholder="Wpisz swoją wiadomość" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Wyślij</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Gabinet Stomatologiczny. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>
