@@ -358,3 +358,45 @@ footer p {
         margin: 0 auto; /* Wyśrodkowanie sekcji */
     }
 }
+
+/* Wycentrowanie sekcji sukcesu */
+.success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sekcja zajmuje całą wysokość ekranu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background-color: #2E2E2E; /* Tło strony */
+    color: #FFFFFF; /* Kolor tekstu */
+}
+
+.success h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.success p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Styl przycisku */
+.success .button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF; /* Kolor tekstu */
+    background-color: #D2691E; /* Kolor przycisku */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    border-radius: 5px; /* Zaokrąglenie przycisku */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+    transition: background-color 0.3s ease;
+}
+
+.success .button:hover {
+    background-color: #B65A1C; /* Ciemniejszy odcień przycisku podczas najechania */
+}
+

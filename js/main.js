@@ -19,3 +19,4 @@ menuLinks.forEach(link => {
 closeBtn.addEventListener('click', () => {
     sideMenu.classList.remove('active'); // Usuń klasę aktywną - zamknij menu
 });
+
